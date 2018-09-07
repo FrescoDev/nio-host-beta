@@ -1,0 +1,8 @@
+{
+  "id": "id",
+  "name": "status check endpoint",
+  "when": "a GET request is sent",
+  "at_path": "/status",
+  "with_method": "GET",
+  "tags": ["status check", "status"]
+}
