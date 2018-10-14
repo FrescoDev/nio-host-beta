@@ -1,7 +1,6 @@
 FROM mhart/alpine-node:8
 
 ENV NODE_ENV=production
-ENV SERVER_PORT=$PORT
 
 RUN mkdir -p /usr/src/host
 WORKDIR /usr/src/host
