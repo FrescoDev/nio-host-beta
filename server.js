@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const bunyanMiddleware = require("bunyan-middleware");
 const helmet = require("helmet");
 const bunyan = require("bunyan");
-const { $PORT } = process.env;
+const { PORT } = process.env;
 const contracts = require("./contracts");
 const R = require("ramda");
 
@@ -47,8 +47,8 @@ const mapContractsToRoutes = R.map(R.ifElse(isGET, mapToGet, mapToPost));
 
 mapContractsToRoutes(contracts);
 
-app.listen($PORT, () => {
-  logger.info("Server running on port %d", $PORT);
+app.listen(PORT, () => {
+  logger.info("Server running on port %d", PORT);
 });
 
 module.exports = app;
